@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code Converter App</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/monaco-editor/0.29.0/min/vs/loader.js"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/themes/prism.css"
+      rel="stylesheet"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.23.0/prism.js"></script>
+  </head>
+  <body>
+    <!-- Button -->
+    <a
+      href="https://github.com/login/oauth/authorize?client_id=f491d24c0e5d5cd09af4"
+      ><button>Continue with github</button></a
+    >
+    <!-- Navbar -->
+    <div class="navbar">
+      <div id="logo">
+        <img src="./images/logo.png" alt="logo.png" />
+      </div>
+      <select id="languageSelect">
+        <option value="">Select Language</option>
+        <option value="javascript" selected>JavaScript</option>
+        <option value="java">Java</option>
+        <option value="python">Python</option>
+        <option value="cpp">C++</option>
+        <option value="c">C</option>
+        <option value="csharp">C#</option>
+        <option value="php">PHP</option>
+      </select>
+      <button id="convertButton">Convert</button>
+      <button id="debugButton">Debug</button>
+      <button id="qualityCheckButton">Quality Check</button>
+    </div>
+    <!-- Editor Containers -->
+    <div id="editorContainer">
+      <!-- Editor -->
+      <!-- Monaco Input -->
+      <div id="editor"></div>
+      <!-- Output -->
+      <div id="output"><h4>Output:</h4></div>
+    </div>
+    <button id="runButton">Execute Code</button>
+    <span style="color: white"
+      ><i
+        >&nbsp;Note: Dont use extra spaces in code if you want to execute
+        it.(Work in Progress)</i
+      ></span
+    >
+  </body>
+</html>
+<script src="./script.js"></script>
